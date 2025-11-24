@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Biblioteca Ada</h1>
+
+    <div class="form-container">
+        <h2>Criar Conta</h2>
+
+        
+        <label class="label" for="usernameRegister">Nome de usuário: </label>
+        <input type="text" id="usernameRegister" placeholder="Crie seu nome de usuário">
+            
+        <label class="label" for="emailRegister">Email: </label>
+        <input type="email" id="emailRegister" placeholder="Crie seu email">
+            
+        <label class="label" for="passwordRegister">Senha :</label>
+        <input type="password" id="passwordRegister" placeholder="Crie sua senha">
+            
+        <button onclick="registerUser()">Registrar</button>
+
+        <p class="login-link">
+            Já possui conta? <a href="login.html">Entrar</a>
+        </p>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

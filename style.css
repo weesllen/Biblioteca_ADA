@@ -1,0 +1,374 @@
+/* Modal genérico */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+.modal.hidden {
+    display: none;
+}
+.modal.active {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    padding: 32px 32px 24px 32px;
+    min-width: 320px;
+    max-width: 95vw;
+    width: 400px;
+    position: relative;
+}
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 24px;
+    color: #0077ff;
+}
+.modal-content label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #333;
+}
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 18px;
+}
+.btn-save {
+    background: #0077ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-save:hover {
+    background: #005bd1;
+}
+.btn-cancel {
+    background: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-cancel:hover {
+    background: #bdbdbd;
+}
+.btn-create {
+    background: #43a047;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0;
+    margin-top: 0;
+    transition: background 0.2s;
+}
+.btn-create:hover {
+    background: #388e3c;
+}
+.admin-actions {
+    max-width: 1000px;
+    margin: 24px auto 10px auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e0e0e0;
+    padding: 30px 40px;
+    border-radius: 10px;
+    margin: 40px auto 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+.header-bar h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #333;
+    font-weight: bolder;
+    background: none;
+    padding: 0;
+}
+.logout-button {
+    background: #0077ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-left: 30px;
+    align-self: flex-start;
+}
+.logout-button:hover {
+    background: #005bd1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    color: #333;
+    font-weight: bolder;
+    font-size: 40px;
+    background-color: #e0e0e0;
+    padding: 30px 0; 
+    border-radius: 10px; 
+}
+
+.form-container {
+    width: 400px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.form-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0 8px 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container button {
+    width: 95%;
+    padding: 10px;
+    background: #0077ff;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-container button:hover {
+    background: #005bd1;
+}
+
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #0077ff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.headTable th {
+    background: #0077ff;
+    color: white;
+    font-weight: bold;
+    padding: 14px 10px;
+    border: none;
+    font-size: 20px;
+    width: 25%;
+}
+
+.headTable th:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.headTable th:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.colTitle {
+    font-size: 18px;
+    font-weight: bold;
+    background: #f5f5f5 !important;
+}
+/* Ícones verdes e vermelhos */
+.status-check {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.status-x {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead tr {
+    background: #f5f5f5;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+td {
+    white-space: normal;
+}
+/* Estilos específicos para a coluna Ações */
+.actions-column {
+    text-align: center;
+    width: 160px;
+}
+
+/* Contêiner interno dos botões */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Botões individuais */
+.action-buttons button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Botão Editar */
+.btn-edit {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Botão Excluir */
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Botão Status */
+.btn-status {
+    background-color: #f1c40f;
+    color: black;
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    padding: 10px 20px;
+    background: #0077ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-action {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-action:hover {
+    background: #e0e0e0;
+    border: 1.5px solid #0077ff;
+}
+.btn-edit { color: #3498db; }
+.btn-delete { color: #e74c3c; }
+.btn-rent { color: #43a047; }

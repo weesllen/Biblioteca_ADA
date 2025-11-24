@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Ada - Gerenciar Usuários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="logout-button" onclick="logOut()">Logout</button>
+    <div class="header-bar">
+        <h1>Biblioteca Ada - Gerenciar Usuários</h1>
+    </div>
+
+    <div class="admin-actions">
+        <button class="btn-create" onclick="openCreateForm()" title="Adicionar Usuário">＋</button>
+        <button class="btn-create" onclick="window.location.href='admin.html'" title="Voltar para Livros" style="margin-left: 10px;">📚</button>
+    </div>
+
+    <div class="table-container">
+        <table id="userTable">
+            <thead class="headTable">
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Tipo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="userFormModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="formTitle">Criar Usuário</h2>
+            <label for="formEmailInput">Email</label>
+            <input type="email" id="formEmailInput">
+            <label for="formUsernameInput">Username</label>
+            <input type="text" id="formUsernameInput">
+            <label for="formPasswordInput" id="passwordLabel">Senha</label>
+            <input type="password" id="formPasswordInput">
+            <label for="formIsAdminInput">Administrador</label>
+            <input type="checkbox" id="formIsAdminInput">
+            <div class="modal-buttons">
+                <button class="btn-save" onclick="saveUser()">Salvar</button>
+                <button class="btn-cancel" onclick="closeForm()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="adminUsers.js"></script>
+</body>
+</html>
+
